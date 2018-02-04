@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import CustomTag from "./CustomTag";
+import Div from "./Div";
 
 class AT2 extends Component {
 
@@ -16,7 +16,11 @@ class AT2 extends Component {
                 <p>
                     This is my props: {this.props.text}
                 </p>
-                <CustomTag/>
+                <Div>
+                    <p>Custom Div</p>
+                    <p>child1</p>
+                    <p>child2</p>
+                </Div>
             </div>
         );
     }
