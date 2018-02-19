@@ -1,5 +1,5 @@
 import React from 'react';
-import './mainLess.less'
+import '../mainLess.less'
 
 function Div (props) {
     return (

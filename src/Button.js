@@ -1,14 +1,17 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 
-const Button = (props) => {
-    return (
-        <input
-            type="button"
-            onClick={props.handleClick}
-            onKeyPress={props.handleClick}
-            value={props.label}
-        />
-    );
-};
+class Button  extends PureComponent {
+
+    render(){
+        return (
+            <input
+                type="button"
+                onClick={this.props.handleClick}
+               /* onKeyPress={props.handleClick}*/
+                value={this.props.label}
+            />
+        );
+    }
+}
 
 export default Button;

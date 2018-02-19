@@ -5,14 +5,9 @@ import Button from './Button';
 
 class App extends Component {
 
-    constructor() {
-        super();
-        this.state = {
-            question: '',
-            answer: ''
-        };
-        this.handleClick = this.handleClick.bind(this);
-
+    state = {
+        question: '',
+        answer: ''
     };
 
     render() {
@@ -100,12 +95,11 @@ class App extends Component {
         );
     }
 
-    handleClick(event) {
+    handleClick = (event) => {
         const value = event.target.value;
 
         switch (value) {
             case '=': {
-                // Знаю знаю так лучше никогда не делать, случайно введи два плюса и ошибка - но у нас идеальный мир ))
                 const answer = eval(this.state.question).toString();
                 this.setState({answer});
                 break;
@@ -115,13 +109,12 @@ class App extends Component {
                 break;
             }
             default: {
-                this.setState({question: this.state.question += value});
+                this.setState({question: this.state.question += ' ' + value});
                 break;
             }
         }
 
     }
-
 
 }
 
